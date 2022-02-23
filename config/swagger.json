@@ -1,0 +1,27 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API - CNPJ/Endereço",
+        "description": "Desafio para criar operações básicas de Cadastro, Leitura, Alteração e Remoção de Clientes com endereço através de uma API Rest.",
+        "contact": {
+            "email": "mantovani.pedro99@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000/api/"
+        }
+    ],
+    "paths": {
+        "/cnpj":{
+            "post": {
+                "summary": "Cadastro de CNPJ",
+                "tags": ["CNPJ"],
+                "requestBody": {
+                    
+                }
+            }
+        }
+    }
+}
