@@ -20,7 +20,7 @@ export async function findCNPJByCNPJ(req: Request, res: Response) {
         const cnpj = req.params.cnpj;
         const cnpjFound = await CNPJModel.findOne({ cnpj: cnpj });
 
-        if(!cnpjFound){
+        if (!cnpjFound) {
             return res.status(404).json({ error: "CNPJ not found" });
         };
         return res.status(200).json(cnpjFound);
@@ -34,7 +34,7 @@ export async function allCNPJ(req: Request, res: Response) {
     try {
         const allCNPJ = await CNPJModel.find();
 
-        if(!allCNPJ){
+        if (!allCNPJ) {
             return res.status(404).json({ error: "No CNPJ not found" });
         };
         return res.status(200).json(allCNPJ);
@@ -49,7 +49,7 @@ export async function deleteCNPJ(req: Request, res: Response) {
         const cnpj = req.params.cnpj;
         const cnpjRemoved = await CNPJModel.findOneAndDelete({ cnpj: cnpj })
 
-        if(!cnpjRemoved){
+        if (!cnpjRemoved) {
             return res.status(404).json({ error: "Error to delete" })
         };
 
@@ -60,14 +60,14 @@ export async function deleteCNPJ(req: Request, res: Response) {
     };
 };
 
-export async function updateCNPJ(req: Request, res: Response) { 
+export async function updateCNPJ(req: Request, res: Response) {
     try {
         const cnpj = req.params.cnpj;
         const data = req.body;
 
-        const cnpjFound = await CNPJModel.find({ cnpj: cnpj});
+        const cnpjFound = await CNPJModel.find({ cnpj: cnpj });
 
-        if(!cnpjFound){
+        if (!cnpjFound) {
             return res.status(404).json({ error: "No CNPJ not found" });
         };
 

@@ -14,13 +14,13 @@
         }
     ],
     "paths": {
-        "/cnpj":{
+        "/cnpj": {
             "post": {
                 "summary": "Cadastro de CNPJ",
-                "tags": ["CNPJ"],
-                "requestBody": {
-                    
-                }
+                "tags": [
+                    "CNPJ"
+                ],
+                "requestBody": {}
             }
         }
     }
