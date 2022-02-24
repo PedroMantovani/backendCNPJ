@@ -38,8 +38,13 @@ export async function allCNPJ(req: Request, res: Response) {
         const allCNPJ = await CNPJModel.find();
 
         if (!allCNPJ) {
+<<<<<<< HEAD
             return res.status(404).json({ error: "CNPJ not found." });
         }
+=======
+            return res.status(404).json({ error: "No CNPJ not found" });
+        };
+>>>>>>> e7f9863e69074352cb930321a6c2015c422a02d3
         return res.status(200).json(allCNPJ);
     } catch (e: any) {
         Logger.error(e.message);
@@ -49,6 +54,25 @@ export async function allCNPJ(req: Request, res: Response) {
     }
 }
 
+<<<<<<< HEAD
+=======
+export async function deleteCNPJ(req: Request, res: Response) {
+    try {
+        const cnpj = req.params.cnpj;
+        const cnpjRemoved = await CNPJModel.findOneAndDelete({ cnpj: cnpj })
+
+        if (!cnpjRemoved) {
+            return res.status(404).json({ error: "Error to delete" })
+        };
+
+        return res.status(200).json({ message: "deleted" })
+    } catch (e: any) {
+        Logger.error(e.message);
+        return res.status(500).json({ error: "We are currently experiencing instability, please try again later." });
+    };
+};
+
+>>>>>>> e7f9863e69074352cb930321a6c2015c422a02d3
 export async function updateCNPJ(req: Request, res: Response) {
     try {
         const cnpj = req.params.cnpj;
@@ -57,8 +81,13 @@ export async function updateCNPJ(req: Request, res: Response) {
         const cnpjFound = await CNPJModel.find({ cnpj: cnpj });
 
         if (!cnpjFound) {
+<<<<<<< HEAD
             return res.status(404).json({ error: "No CNPJ not found." });
         }
+=======
+            return res.status(404).json({ error: "No CNPJ not found" });
+        };
+>>>>>>> e7f9863e69074352cb930321a6c2015c422a02d3
 
         await CNPJModel.updateOne({ cnpj: cnpj }, data);
 
