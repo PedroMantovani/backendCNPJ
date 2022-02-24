@@ -3,7 +3,7 @@ require("dotenv").config();
 import express from "express";
 import config from "config";
 import SwaggerUI from "swagger-ui-express";
-import swaggerDocs from "../config/swagger.json"
+import swaggerDocs from "../config/swagger.json";
 
 const app = express();
 
@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 // Swagger
-app.use("/docs", SwaggerUI.serve, SwaggerUI.setup(swaggerDocs))
+app.use("/docs", SwaggerUI.serve, SwaggerUI.setup(swaggerDocs));
 
 // DB
 import db from "../config/db";
@@ -32,7 +32,6 @@ app.use("/api/", router);
 const port = config.get<number>("port");
 
 app.listen(port, async () => {
-
     await db();
 
     Logger.info(`Running on port: ${port}`);

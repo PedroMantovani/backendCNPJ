@@ -1,15 +1,15 @@
 import { model, Schema } from "mongoose";
 
-const CNPJSchema = new Schema(
+const CNPJSchema: Schema = new Schema(
     {
-        cnpj: {type: Number},
-        razao: {type: String},
-        nome: {type: String},
-        contato: {type: Number}
+        cnpj: { type: String, required: true },
+        razao: { type: String, required: true },
+        nome: { type: String, required: true },
+        contato: { type: Number, required: true },
     },
     {
-        timestamps: true
+        timestamps: true,
     }
-)
+);
 
-export const CNPJModel = model("cnpj", CNPJSchema)
+export const CNPJModel = model("cnpj", CNPJSchema);
