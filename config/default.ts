@@ -1,5 +1,5 @@
 export default {
-    port: 3000,
-    dbUri: "mongodb://localhost/tsApi",
+    port: process.env.PORT,
+    dbUri: process.env.DB_URI,
     env: process.env.NODE_ENV,
 };
