@@ -12,10 +12,10 @@ export default router
     .post("/cnpj", cnpjValidation(), validate, createCNPJ)
     .get("/cnpj/:cnpj", findCNPJByCNPJ)
     .get("/cnpj", allCNPJ)
-    .patch("/cnpj/:cnpj", cnpjValidation(), validate, updateCNPJ)
+    .patch("/cnpj/:cnpj", updateCNPJ)
     .delete("/cnpj/:cnpj", deleteCNPJ)
     // Adress
     .post("/endereco", enderecoValidation(), validate, createEndereco)
     .get("/endereco/:endereco", findEnredecoById)
-    .patch("/endereco/:endereco", enderecoValidation(), validate, updateEndereco)
+    .patch("/endereco/:endereco", updateEndereco)
     .delete("/endereco/:endereco", deleteEndereco);

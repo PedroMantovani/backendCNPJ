@@ -2,16 +2,11 @@ require("dotenv").config();
 
 import express from "express";
 import config from "config";
-import SwaggerUI from "swagger-ui-express";
-import swaggerDocs from "../config/swagger.json";
 
 const app = express();
 
 // JSON middleware
 app.use(express.json());
-
-// Swagger
-app.use("/docs", SwaggerUI.serve, SwaggerUI.setup(swaggerDocs));
 
 // DB
 import db from "../config/db";
