@@ -24,8 +24,9 @@ Rest api com operações básicas de Cadastro, Leitura, Alteração e Remoção 
    ```sh
    npm install
    ```
-3. Importe no Insomnia o arquivo insomnia_TS.json para ter as rotas prontas para os testes. "Path: utils/insomnia_TS.json"
-4. Inicie o projeto com o comando:
+3. Importe no Insomnia o arquivo insomnia_TS.json para ter as rotas prontas para os testes. 
+      "Path: utils/insomnia_TS.json"
+5. Inicie o projeto com o comando:
    ```sh
    npm start
    ```
